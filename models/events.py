@@ -12,6 +12,7 @@ class Event(BaseModel):
     class Config:
         json_schema_extra = {
             "example": {
+                "id": 1,
                 "title": "Foo Fighters",
                 "image": "https://linktomyimage.com/image.png",
                 "description": "Foo Fighters in Inverness",
@@ -19,4 +20,3 @@ class Event(BaseModel):
                 "location": "Eden Court"
             }
         }
-    

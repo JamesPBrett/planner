@@ -2,21 +2,19 @@ from pydantic import BaseModel, EmailStr
 from typing import Optional, List
 from models.events import Event
 
-
 class User(BaseModel):
     email: EmailStr
     password: str
-    events: Optional[List[Event]]
-    
+
     class Config:
         json_schema_extra = {
             "example": {
-                "email": "foo@rock.com",
-                "username": "foo",
-                "events": [],
+                "email": "fastapi@packt.com",
+                "password": "strong!!!",
             }
         }
-        
+
+
 class UserSignIn(BaseModel):
     email: EmailStr
     password: str
@@ -24,7 +22,7 @@ class UserSignIn(BaseModel):
     class Config:
         json_schema_extra = {
             "example": {
-                "email": "foo@rock.com",
-                "username": "foo"
+                "email": "fastapi@packt.com",
+                "password": "strong!!!"
             }
         }
